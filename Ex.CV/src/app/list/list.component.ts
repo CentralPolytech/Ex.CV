@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Cv} from "../model/cv";
 
 @Component({
@@ -8,6 +8,7 @@ import {Cv} from "../model/cv";
 })
 export class ListComponent implements OnInit {
   cvs : Cv[]=[];
+  @Output() cven = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
@@ -17,7 +18,7 @@ export class ListComponent implements OnInit {
       new Cv(3, '5678', 'Bilel', 'Saad', 'Ingénieur', 'rotating_card_profile2.png', 34),
     ]
   }
-  recevoir(cv: Cv) {
-    console.log(cv);
+  recevoir(cven: Cv) {
+    this.cven.emit(cven);
   }
 }

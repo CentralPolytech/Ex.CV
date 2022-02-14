@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Cv} from "../model/cv";
 
 @Component({
   selector: 'app-cv',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cv.component.css']
 })
 export class CvComponent implements OnInit {
-
-  constructor() { }
-
+cven: Cv;
+  constructor() {
+  }
   ngOnInit(): void {
   }
-
+  recevoir(cv: Cv){
+    this.cven= cv;
+  }
 }
