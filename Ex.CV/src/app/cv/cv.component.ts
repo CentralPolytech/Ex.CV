@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Cv} from "../model/cv";
 
 @Component({
@@ -7,7 +7,7 @@ import {Cv} from "../model/cv";
   styleUrls: ['./cv.component.css']
 })
 export class CvComponent implements OnInit {
-cven: Cv;
+@Input() cven: Cv | null = null;
   constructor() {
   }
   ngOnInit(): void {
