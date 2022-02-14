@@ -17,5 +17,7 @@ export class ListComponent implements OnInit {
       new Cv(3, '5678', 'Bilel', 'Saad', 'Ingénieur', 'rotating_card_profile2.png', 34),
     ]
   }
-
+  recevoir(cv: Cv) {
+    console.log(cv);
+  }
 }
