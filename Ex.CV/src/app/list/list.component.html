@@ -1,11 +1,5 @@
 <ol class="list-group">
   <li class="list-group-item">
-    <app-item (cven) =recevoir($event) [cv]="cvs[0]"></app-item>
-  </li>
-  <li class="list-group-item">
-    <app-item (cven) =recevoir($event) [cv]="cvs[1]"></app-item>
-  </li>
-  <li class="list-group-item">
-    <app-item (cven) =recevoir($event) [cv]="cvs[2]"></app-item>
+    <app-item *ngFor="let cv of cvs" (cven) =recevoir($event) [cv]="cv"></app-item>
   </li>
 </ol>

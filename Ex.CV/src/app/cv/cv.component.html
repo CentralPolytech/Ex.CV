@@ -7,6 +7,6 @@
     <app-list (cven)="recevoir($event)"></app-list>
   </div>
   <div class="col">
-    <app-detail [cv]="cven"></app-detail>
+    <app-detail *ngIf="cven" [cv]="cven"></app-detail>
   </div>
 </div>
