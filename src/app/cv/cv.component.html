@@ -1,0 +1,12 @@
+<div class="row"><li class="list-group-item">
+  <h1>CV</h1><h4>Cliquez sur l'élément CV pour afficher les détails!</h4></li>
+</div><br>
+
+<div class="row">
+  <div class="col">
+    <app-list (cven)="recevoir($event)"></app-list>
+  </div>
+  <div class="col">
+    <app-detail *ngIf="cven" [cv]="cven"></app-detail>
+  </div>
+</div>
